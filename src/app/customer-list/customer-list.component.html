@@ -1,0 +1,63 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h5>List of All Customers</h5>
+<table class="table table-bordered">
+ 
+  <tr>
+    <th>
+      UserID
+    </th>
+   <th>
+     Name
+   </th>
+  </tr>
+
+
+  <tr *ngFor="let customer of customers">
+<td>{{customer.user_id}}</td>
+<td>{{customer.name}}</td>
+
+  </tr>
+
+
+</table>
+    </div>
+    <div class="col-sm-6">
+<h5>
+  Customers Under 100 Kms
+</h5>
+
+<input type="button" value="Click to View Customers List" (click)="searchCustomer()">
+
+<table class="table table-bordered">
+ 
+    <tr>
+      <th>
+        UserID
+      </th>
+     <th>
+       Name
+     </th>
+    </tr>
+  
+  
+    <tr *ngFor="let customer of sortedCustomers">
+  <td>{{customer.user_id}}</td>
+  <td>{{customer.name}}</td>
+  
+    </tr>
+  
+  
+  </table>
+  
+
+
+      </div>
+
+  </div>
+
+  </div>
+
+
